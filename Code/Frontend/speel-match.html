@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cy-Jay Somers - ScoreCounter</title>
+    <meta name="description" content="This is my HTML5 boilerplate.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/vscreen.css">
+    <link rel="stylesheet" href="https://use.typekit.net/luv1axs.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"
+        integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy"
+        crossorigin="anonymous"></script>
+    <script src="script/vapp.js"></script>
+    <script src="script/datahandler.js"></script>
+
+</head>
+
+<body>
+    <header class="o-row o-row--lg o-row--color u-klein-scherm">
+        <div class="o-container">
+            <div class="c-header">
+                <a href="index.html">
+                    <svg class="home-btn" id="baseline-home-24px" xmlns="http://www.w3.org/2000/svg" width="36"
+                        height="36" viewBox="0 0 24 24">
+                        <path id="Path_152" data-name="Path 152" d="M10,20V14h4v6h5V12h3L12,3,2,12H5v8Z"
+                            fill="#f2f7ff" />
+                        <path id="Path_153" data-name="Path 153" d="M0,0H24V24H0Z" fill="none" />
+                    </svg>
+                </a>
+                <h1>ScoreCounter</h1>
+            </div>
+        </div>
+    </header>
+
+    <header class="o-row u-display js-display2">
+        <div class="o-container">
+            <div class="c-header">
+                <a href="index.html">
+                    <svg class="home-btn" id="baseline-home-24px" xmlns="http://www.w3.org/2000/svg" width="36"
+                        height="36" viewBox="0 0 24 24">
+                        <path id="Path_152" data-name="Path 152" d="M10,20V14h4v6h5V12h3L12,3,2,12H5v8Z"
+                            fill="#f2f7ff" />
+                        <path id="Path_153" data-name="Path 153" d="M0,0H24V24H0Z" fill="none" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <header class="o-row js-display">
+        <div class="o-container">
+            <div class="c-header">
+                <a href="index.html">
+                    <svg class="home-btn" id="baseline-home-24px" xmlns="http://www.w3.org/2000/svg" width="36"
+                        height="36" viewBox="0 0 24 24">
+                        <path id="Path_152" data-name="Path 152" d="M10,20V14h4v6h5V12h3L12,3,2,12H5v8Z"
+                            fill="#f2f7ff" />
+                        <path id="Path_153" data-name="Path 153" d="M0,0H24V24H0Z" fill="none" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="o-container js-select-spelers">
+        
+
+        <div class="u-mar">
+            <label class="u-32-bold" for="speler">Selecteer Speler 1 (R):</label>
+            <select name="speler" id="speler" class="c-select js-select-speler">
+                <option value="0">naam1</option>
+                <option value="1">naam2</option>
+            </select>
+        </div>
+
+        <div class="c-form__item">
+            <label class="u-32-bold" for="speler">Selecteer Speler 2 (B):</label>
+            <select name="speler" id="speler" class="c-select js-select-speler2">
+                <option value="0">naam1</option>
+                <option value="1">naam2</option>
+            </select>
+        </div>
+        <a class="cta-button js-match-start" href="#!">Speel Match!</a>
+    </div>
+
+    
+    
+    <section class="o-row o-row--lg js-score-weergeven u-hide">
+        
+        <div class="o-container">
+            <div class=" o-layout o-layout--align-center js-scorebord o-layout--row-reverse">
+
+                <div class="o-layout__item u-1-of-2 o-layout--align-center">
+                    <p class=" u-ib">
+                        NAAM1
+                    <p class=" u-p-groot-rood">
+                        0
+                    </p>
+
+                </div>
+                <div class="o-layout__item u-1-of-2 o-layout--align-center">
+                    <p class="u-ib2">
+                        NAAM2
+                    </p>
+                    <p class=" u-p-groot-blauw">
+                        0
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p class="u-p-groot js-snelheid">0.00 cm/s</p>
+            </div>
+            <div class=" o-layout c-buttons u-hide js-buttons">
+                <div class="o-layout__item u-1-of-2 o-layout--justify-space-around cta-button__space">
+                    <p class="cta-button u-mar__left js-speler2Plus">+</p>
+                    <p class="cta-button u-mar__right js-speler2Min">-</p>
+                </div>
+                <div class="o-layout__item u-1-of-2 cta-button__space">
+                    <p class="cta-button u-mar__left js-speler1Plus">+</p>
+                    <p class="cta-button u-mar__right js-speler1Min">-</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

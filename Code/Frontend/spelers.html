@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cy-Jay Somers - ScoreCounter</title>
+    <meta name="description" content="This is my HTML5 boilerplate.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/vscreen.css">
+    <link rel="stylesheet" href="https://use.typekit.net/luv1axs.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"
+        integrity="sha384-DkkWv9oJFWLIydBXXjkBWnG1/fuVhw8YPBq37uvvD6WSYRFRqr21eY5Dg9ZhmWdy"
+        crossorigin="anonymous"></script>
+    <script src="script/vapp.js"></script>
+    <script src="script/datahandler.js"></script>
+</head>
+
+<body>
+    <header class="o-row o-row--lg o-row--color">
+        <div class="o-container">
+            <div class="c-header">
+                <a href="index.html">
+                    <svg class="home-btn" id="baseline-home-24px" xmlns="http://www.w3.org/2000/svg" width="36"
+                        height="36" viewBox="0 0 24 24">
+                        <path id="Path_152" data-name="Path 152" d="M10,20V14h4v6h5V12h3L12,3,2,12H5v8Z"
+                            fill="#f2f7ff" />
+                        <path id="Path_153" data-name="Path 153" d="M0,0H24V24H0Z" fill="none" />
+                    </svg>
+                </a>
+                <h1>Spelers</h1>
+            </div>
+        </div>
+    </header>
+    <div class="o-container js-spelers">
+
+        <table class="js-overzicht-spelers">
+            <tr>
+                <th>ID</th>
+                <th>Naam</th>
+                <th>Verwijderen</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>bobtje</td>
+                <td><svg class="c-match__delete-symbol js-delete-speler" data-spelerid="${ID}"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#222222"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="arcs">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg></td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
